@@ -1,28 +1,30 @@
 #include <stdio.h>
 
 /**
-* main - Print numbers from 00 to 99
-*
-* Return: Always 0 (Success)
-*/
+ * main - entry point
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	int tens;
-	int ones;
+	int digit1, digit2;
 
-	for (tens = 0; tens < 9; tens++)
+	for (digit1 = 0; digit1 < 9; digit1++)
 	{
-	for (ones = 1; ones < 10; ones++)
+	for (digit2 = digit1 + 1; digit2 < 10; digit2++)
 	{
-	putchar((tens % 10) + '0');
-	putchar((ones % 10) + '0');
+	putchar((digit1 % 10) + '0');
+	putchar((digit2 % 10) + '0');
 
-	if (tens == 8 && ones == 9)
+	if (digit1 == 8 && digit2 == 9)
 	continue;
+
 	putchar(',');
 	putchar(' ');
 	}
 	}
+
 	putchar('\n');
+
 	return (0);
 }
